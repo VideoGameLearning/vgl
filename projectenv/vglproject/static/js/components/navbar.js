@@ -1,4 +1,4 @@
-angular.module('home')
+angular.module('main')
 .directive('navbar', () => {
 	return {
 		restrict: 'E',
