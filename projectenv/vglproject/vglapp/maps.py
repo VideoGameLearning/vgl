@@ -1,5 +1,3 @@
-import numpy as np
-
 class Map:
   def __init__(self, x, y):
     # map layout is xxy
