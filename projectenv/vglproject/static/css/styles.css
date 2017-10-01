@@ -157,3 +157,11 @@ a {
 	height: 100%;
 }
 
+.facebook-icon {
+	height: 50px;
+	width: 50px;
+	margin-top: 15px;
+	background-image: url(../assets/facebook.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
