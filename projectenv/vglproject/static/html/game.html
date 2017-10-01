@@ -1,18 +1,83 @@
 <div class="game-container">
-	<div class="top-bar">
-		<div class="nav-container">
-		  <div class="img-container">
-		    <a href="#!/" class="logo-link"></a>
-		  </div>
-		  <div class="nav-menu">
-		    <ul class="nav-menu-options">
-				  <li class="login" ng-click="clickLogout()">Logout</li>
-				</ul>
-			</div>
-	  </div>
-	</div>
+	<div class="top-bar"></div>
 	<ul class="split-container">
-		<li class="game-text"></li>
-		<li class="game-view"></li>
+		<li class="game-text">
+			<p class="playerInputDisplay">
+			<form class="playerForm" action="/action_page.php">
+				<input ng-model="playerInput" class = "playerInput" type="text" name="fname">
+				<input class="btn" type="submit" value="Submit">
+			</form>
+
+		</li>
+
+		<li class="game-view">
+
+			<table class=" table">
+				<img class= "imageOnBottom" ng-src= '/static/assets/ass2.png'/>
+				<tr class="gridStyle row0">
+					<td class="gridStyle pos00">
+						<img class= "imageOnTop" ng-src= '/static/assets/ass11.png'/>
+					</td>
+					<td class="gridStyle pos01">
+					</td>
+					<td class="gridStyle pos02">
+					</td>
+					<td class="gridStyle pos03">
+					</td>
+					<td class="gridStyle pos04">
+					</td>
+				</tr>
+				<tr class="gridStyle row1">
+					<td class="gridStyle pos10">
+					</td>
+					<td class="gridStyle pos11">
+					</td>
+					<td class="gridStyle pos12">
+					</td>
+					<td class="gridStyle pos13">
+					</td>
+					<td class="gridStyle pos14">
+					</td>
+				</tr>
+				<tr class="gridStyle row2">
+					<td class="gridStyle pos20">
+					</td>
+					<td class="gridStyle pos21">
+					<img class= "imageOnTop" ng-src= '/static/assets/ass8.png'/>
+					</td>
+					<td class="gridStyle pos22">
+					</td>
+					<td class="gridStyle pos23">
+					</td>
+					<td class="gridStyle pos24">
+					</td>
+				</tr>
+				<tr class="gridStyle row3">
+					<td class="gridStyle pos30">
+					</td>
+					<td class="gridStyle pos31">
+					</td>
+					<td class="gridStyle pos32">
+					</td>
+					<td class="gridStyle pos33">
+					</td>
+					<td class="gridStyle pos34">
+					</td>
+				</tr>
+				<tr class="gridStyle row4">
+					<td class="gridStyle pos40">
+					</td>
+					<td class="gridStyle pos41">
+					</td>
+					<td class="gridStyle pos42">
+					</td>
+					<td class="gridStyle pos43"> 
+					</td>
+					<td class="gridStyle pos44">
+					</td>
+				</tr>
+			</table>
+		</li>
+
 	</ul>
 </div>
