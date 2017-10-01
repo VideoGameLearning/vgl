@@ -6,7 +6,7 @@ class Character:
     # position is 1x2 array [x,y]
     self.position = self.level.start
     # initial placement of character position
-    self.level.map.layout[self.position[1]][self.position[0]] = self
+    self.level.map.layout[self.position[1]][self.position[0]] = "x"
     
 
    # different movements for the character  
@@ -22,12 +22,12 @@ class Character:
 
   def moveUp(self):
     x = self.position[0]
-    y = self.position[1] - 1   
+    y = self.position[1] - 1 # inverted due to the display of the array  
     self.setposition(x,y)
 
   def moveDown(self):
     x = self.position[0] 
-    y = self.position[1] + 1
+    y = self.position[1] + 1 # inverted due to the display of the array  
     self.setposition(x,y)
 
   def checkmovement(self,position):
@@ -39,8 +39,14 @@ class Character:
 
   def checkblocked(self,position):
     # Checks to see if an object is in the position, if so return true, if not return false
-    if self.level.map.layout[position[1]][self.position[0]]:
-      return True
+    x = len(self.level.map.layout[0])
+    y = len(self.level.map.layout)
+  
+    if (position[0] < x and position[1] < y):
+      if self.level.map.layout[position[1]][position[0]] :
+        return True
+      else:
+        return False
     else:
       return False
 
@@ -53,10 +59,10 @@ class Character:
 
   def setposition(self,x,y):
     # puts character into new position if it can, if not then error
-    if self.checkboundary([x,y]) and not self.checkmovement([x,y]):
+    if self.checkboundary([x,y]) and not self.checkblocked([x,y]):
       self.level.map.layout[self.position[1]][self.position[0]] = []
       self.position = [x,y]
-      self.level.map.layout[self.position[1]][self.position[0]] = self
+      self.level.map.layout[self.position[1]][self.position[0]] = "x"
     else:
       print("Error")
 
