@@ -23,6 +23,10 @@ a {
 	color: #000000;
 }
 
+button:focus {
+	outline: none;
+}
+
 .navbar {
 	width: 100%;
 	padding-top: 15px;
@@ -146,9 +150,10 @@ a {
 }
 
 .game-text {
-	background-color: blue;
+	background-color: #f9fafa;
 	width: 50%;
 	height: 100%;
+	position: relative;
 }
 
 .game-wrapper {
@@ -162,7 +167,6 @@ a {
 
 .game-view {
 	margin-right: 0;
-	background-color: red;
 	width: 50%;
 	height: 100%;
 }
@@ -230,8 +234,14 @@ Game side
 	position: relative;
 	width: 100%;
 	height: 100%;
-
 }
+
+.table td {
+	background-image: url(../assets/grass.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
 .gridStyle {
 	position: relative;
     width: 20%; 
@@ -259,21 +269,32 @@ tr td{
 Player Side
 */
 
-.playerInputDisplay{
-	position: relative;
-	width:40%;
-	height:70%;
-	top: 5%;
-	left: 2%;
-
+.player-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 400px;
+	height: 500px;
+	font-size: 1.2em;
 }
 
+.player-button {
+	margin-top: 15px;
+	width: 400px;
+	height: 30px;
+}
 
-.playerInput{
-	position: absolute;
-    top: 90%;
-    left: 2%;
-    width: 40%;
+.player-text {
+	width: 400px;
+	height: 300px;
+}
+
+.player-input{
+	width: 400px;
+	height: 30px;
 }
 
 .btn{
